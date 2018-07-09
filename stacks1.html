@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Stacks Using Array
+	</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,400i,600,600i,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+  <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/design-5/32/layers-square-512.png">
+  <style type="text/css">
+  	body{
+  		font-family: 'Josefin Slab', serif;
+  		
+  		background-attachment: fixed;
+  		font-size: 25px;
+  	}
+  </style>
+</head>
+<body>
+	<center>
+<h2  class="animated flipInX" style="padding-top: 3%"><b>Stacks</b>
+</h2>
+</center>
+<div class="container" style="padding-left: 5%;padding-right: 5%">
+	<div class="row" style=" background: linear-gradient(45deg,blue,rgb(54,102,181),rgb(4,48,119),darkblue);color: white;padding-left: 2%;padding-top: 1%">
+		<h4 class="animated bounceIn"><b>What is a stack?</b></h4>
+	</div>
+	<div class="row animated lightSpeedIn">
+		Stack is a linear data structure in which the insertion and deletion operations are performed at only one end. In a stack, adding and removing of elements are performed at single position which is known as "top". That means, new element is added at top of the stack and an element is removed from the top of the stack. In stack, the insertion and deletion operations are performed based on LIFO (Last In First Out) principle.Watch the video given below to understand stacks clearly.
+	</div>
+	<br>
+	<div class="row justify-content-center">
+		<iframe   height="290" src="https://www.youtube.com/embed/Hmjt8qPeZSI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-12 col-md-6 animated slideInUp"></iframe>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png" class="col-12 col-md-6 animated slideInDown" style="height: 290px;padding-top: 2%">
+	</div>
+<br>
+	<div class="row" style=" background: linear-gradient(45deg,blue,rgb(54,102,181),rgb(4,48,119),darkblue);color: white;padding-left: 2%;padding-top: 1%">
+		<h4 class="animated slideInUp"><b>Stack Implementation</b></h4>
+	</div>
+	<div class="row animated slideInLeft">
+		Stacks can be implemented in two ways <br>
+		1. Using Arrays (Explained below)<br>
+		2. Using Linked List (Will be discussed in future)<br>
+	</div>
+	<br>
+		<div class="row" style=" background: linear-gradient(45deg,blue,rgb(54,102,181),rgb(4,48,119),darkblue);color: white;padding-left: 2%;padding-top: 1%">
+		<h4 class="animated slideInUp"><b>Stack Using array</b></h4>
+	</div>
+	<div class="row">
+	
+		<ul>
+			<li class="animated slideInLeft">We will have basically 3 functions<br>
+			1. Pop (With no arguments because its work is to remove the top element)<br>
+			2. Push (With no argument)<br>
+			3. Display (to display the elements of stack)
+		</li>
+		<li class="animated slideInRight">
+			We will maintain a variable named as top  which will indicate the top of stack.If it's value is -1 then we say that stack is empty (we assign -1 as default value to top as initially stack is empty)
+		</li>
+		<li class="animated slideInLeft">
+			We will have an array of integer type to hold the data values (a max size will be taken and if all places in array are occupied then we say that whole stack is full and no further push possible)
+		</li>
+		<li class="animated slideInRight">
+			Switch case will be used to provide different operations in a single program.
+		</li>
+		<li class="animated slideInLeft">
+			Array and top  will be declared as global to avoid passing more parameters to diff functions.
+			Global variables are the variable which are declared just after the  header files and can be used directly by any function in the program without passing.
+		</li>
+		</ul>
+		
+	</div>
+	<div class="row">
+		<h5>Copy the code to your offline complier and see the result</h5>
+	</div>
+	<div class="row">
+		<textarea disabled="" class="col-12" style="height: 600px;margin-bottom: 5%" id="code1">
+#include<stdio.h>
+int stack[100],choice,n,top=-1,x,i;
+void push()
+{
+    if(top>=n-1)
+    {
+        printf("\n\tSTACK is over flow");
+         
+    }
+    else
+    {
+        printf(" Enter a value to be pushed:");
+        scanf("%d",&x);
+        top++;
+        stack[top]=x;
+    }
+}
+
+void pop()
+{
+    if(top<=-1)
+    {
+        printf("\n\t Stack is under flow");
+    }
+    else
+    {
+        printf("\n\t The popped elements is %d ",stack[top]);
+        top--;
+    }
+}
+void display()
+{
+    if(top>=0)
+    {
+        printf("\n The elements in STACK \n");
+        for(i=top; i>=0; i--)
+            printf("\n%d",stack[i]);
+        printf("\n Press Next Choice");
+    }
+    else
+    {
+        printf("\n The STACK is empty");
+    }
+    
+}
+int main()
+{
+    printf("\n Enter the size of STACK[MAX=100]: ");
+    scanf("%d",&n);
+    printf("\n\t STACK OPERATIONS USING ARRAY");
+    printf("\n\t--------------------------------");
+    printf("\n\t 1.PUSH\n\t 2.POP\n\t 3.DISPLAY\n\t 4.EXIT");
+    do
+    {
+        printf("\n Enter the Choice: ");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:
+            {
+                push();
+                break;
+            }
+            case 2:
+            {
+                pop();
+                break;
+            }
+            case 3:
+            {
+                display();
+                break;
+            }
+            case 4:
+            {
+                printf("\n\t EXIT POINT ");
+                break;
+            }
+            default:
+            {
+                printf ("\n\t Please Enter a Valid Choice(1/2/3/4)");
+            }
+                 
+        }
+    }
+    while(choice!=4);
+    return 0;
+}
+
+s
+		</textarea>
+	</div>
+	<div class="container">
+
+		After Successfull implementation proceed to the following questions<br>
+		<a href="https://www.hackerrank.com/challenges/maximum-element/problem" target="_blank">Basic Problem</a><br>
+		<a href="https://www.hackerrank.com/challenges/balanced-brackets/problem" target="_blank">Bracket balance</a><br>
+		<a href="https://www.hackerrank.com/challenges/equal-stacks/problem" target="_blank">Equal Stack</a><br>
+		<a href="https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/the-football-fest-6/" target="_blank">Football-fest</a>
+		<br>
+		<a href="https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/monk-and-philosophers-stone/">Monk and Philospher</a>
+
+	</div>
+	<div>
+		<h3>If you find any mistake feel free to tell us.</h3>
+		Trilok kaushik <br> <a href="tel:+91 9416790287"><i class="fa fa-phone"></i> 9416790287</a>
+		<br>
+		<a href="mailto:trilokkaushik0@gmail.com"><i class="fa fa-envelope-o"></i> trilokkaushik0@gmail.com</a>
+	</div>
+</div>
+
+</body>
+</html>
