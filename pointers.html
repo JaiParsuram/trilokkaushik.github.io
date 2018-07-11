@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Pointers
+	</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,400i,600,600i,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
+  <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/design-5/32/layers-square-512.png">
+   <style type="text/css">
+  	body{
+  		font-family: 'Josefin Slab', serif;
+  		
+  		background-attachment: fixed;
+  		font-size: 25px;
+  	}
+  </style>
+
+</head>
+<body>
+<div class="container">
+	<center><h3 style=" background: linear-gradient(45deg,blue,rgb(54,102,181),rgb(4,48,119),darkblue);color: white;padding-left: 2%;" class="animated bounceIn">Pointers</h3></center>
+	<div class="row animated slideInUp">
+		<ul>
+			<li>
+				Pointers in C language is a variable that stores/points the address of another variable. A Pointer in C is used to allocate memory dynamically i.e. at run time. The pointer variable might be belonging to any of the data type such as int, float, char, double, short etc.
+			</li>
+			<li>
+				Pointer Syntax : data_type *var_name; Example : int *p;  char *p;
+			</li>
+			<li>
+				Where, * is used to denote that “p” is pointer variable and not a normal variable.
+			</li>
+			<li>
+				Normal variable stores the value whereas pointer variable stores the address of the variable.
+			</li>
+			<li>
+				The content of the C pointer always be a whole number i.e. address.
+
+			</li>
+			<li>
+				Always C pointer is initialized to null, i.e. int *p = null.
+
+			</li>
+			<li>
+				The value of null pointer is 0.
+			</li>
+			<li>
+				& symbol is used to get the address of the variable.
+			</li>
+			<li>
+				* symbol is used to get the value of the variable that the pointer is pointing to.
+			</li>
+		<li>
+			If a pointer in C is assigned to NULL, it means it is pointing to nothing.
+
+		</li>
+		<li>
+			Two pointers can be subtracted to know how many elements are available between these two pointers.
+		</li>
+		<li>
+			The size of any pointer is 2 byte (for 16 bit compiler).
+		</li>
+		</ul>
+	</div>
+	<h4>
+		To understand more clearly let us have some video  tutorials.Once you go through these basic things then my role come into picture.
+		Also finish the entire concept in one timeslot
+	</h4>
+	<div class="row">
+	<iframe  height="100" src="https://www.youtube.com/embed/u23m0Oun_BY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+	<iframe  height="100" src="https://www.youtube.com/embed/lvlyDmzro_Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+	<iframe  height="100" src="https://www.youtube.com/embed/D4lsZ91UD9A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+	<iframe  height="100" src="https://www.youtube.com/embed/VHSda0pJgwg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+	<iframe  height="100" src="https://www.youtube.com/embed/KvZUY4QHkVo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+	<iframe height="100" src="https://www.youtube.com/embed/W9OPB8khki0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+</div>
+<br>
+<div class="row">
+	<iframe height="100" src="https://www.youtube.com/embed/KtRxZkinDrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-md-2 col-4"></iframe>
+	<iframe height="100" src="https://www.youtube.com/embed/hlCi34QgyM4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+	<iframe height="100" src="https://www.youtube.com/embed/LPABbqfElA8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-md-2 col-4"></iframe>
+	<iframe height="100" src="https://www.youtube.com/embed/k6YY-H0mmK8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col-4 col-md-2"></iframe>
+</div>
+<br>
+<h4 style=" background: linear-gradient(45deg,blue,rgb(54,102,181),rgb(4,48,119),darkblue);color: white;padding-left: 2%;">Some Basic pointer problem & Solutions</h4><br>
+
+<div class=" col-6 col-md-3" style="float: left;padding-top: 2%" >
+	<a class="btn btn-primary col-8" data-toggle="collapse" href="#que1" role="button" aria-expanded="false" aria-controls="que1">
+    Adder
+  </a>
+  <div class="collapse" id="que1">
+  <div class="card card-body">
+   Add Two numbers a and b using pointer<br>
+   Sample input:<br>
+   10 5<br>
+   Sample output:<br>
+   15
+    <center><a class="btn btn-primary" href="https://code.hackerearth.com/e7fbb8Y" target="_blank">Solution</a></center>
+  </div>
+ 
+</div>
+
+</div>
+<div class=" col-6 col-md-3" style="float: left;padding-top: 2%">
+<a class="btn btn-primary col-8" data-toggle="collapse" href="#que2" role="button" aria-expanded="false" aria-controls="que2">
+    Subtractor
+  </a>
+  <div class="collapse" id="que2">
+  <div class="card card-body">
+   Subtract Two numbers a and b using pointer<br>
+   Sample input:<br>
+   10 3<br>
+   Sample output:<br>
+   7
+   <center><a class="btn btn-primary" href="https://code.hackerearth.com/e071aee" target="_blank">Solution</a></center>
+  </div>
+</div>
+</div>
+
+
+<div class=" col-6 col-md-3" style="float: left;margin-top: 2%">
+<a class="btn btn-primary col-8" data-toggle="collapse" href="#que3" role="button" aria-expanded="false" aria-controls="que3">
+    Maxima
+  </a>
+  <div class="collapse" id="que3">
+  <div class="card card-body">
+   Find maximum of  a and b using pointer<br>
+   Sample input:<br>
+   10 3<br>
+   Sample output:<br>
+   10
+   <center><a class="btn btn-primary" href="https://code.hackerearth.com/642b12L" target="_blank">Solution</a></center>
+  </div>
+</div>
+</div>
+
+<div class=" col-6 col-md-3" style="float: left;margin-top: 2%">
+<a class="btn btn-primary col-8" data-toggle="collapse" href="#que4" role="button" aria-expanded="false" aria-controls="que4">
+    Swap
+  </a>
+  <div class="collapse" id="que4">
+  <div class="card card-body">
+   Swap two number a and b using pointer<br>
+   Sample input:<br>
+   10 3<br>
+   Sample output:<br>
+   3 10
+   <center><a class="btn btn-primary" href="https://code.hackerearth.com/88b9cdt" target="_blank">Solution</a></center>
+  </div>
+</div>
+</div>
+
+</div>
+<br>
+<br>
+<br>
+<div class="container" style=" background: linear-gradient(45deg,blue,rgb(54,102,181),rgb(4,48,119),darkblue);color: white;padding-left: 2%;">
+	<center>2018 <i class="fa fa-copyright"></i>dgeekweapons.tech</center>
+</div>
+</body>
+</html>
